@@ -1,14 +1,17 @@
 package com.sparata.week04.utils;
 
 import com.sparata.week04.models.ItemDto;
+import lombok.RequiredArgsConstructor;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.http.*;
+import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Component // @RequiredArgsConstructor 와 함께 사용할 경우 스프링이 자동으로 생성합니다.
 public class NaverShopSearch {
     public String search(String query) {
         RestTemplate rest = new RestTemplate();
